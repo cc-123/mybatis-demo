@@ -1,8 +1,16 @@
 package com.cc.mybatisdemo.pojo;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
+@ApiModel(value = "Student", description = "学生表")
 public class Student {
+    @ApiModelProperty(value = "id", example = "1", required = true)
     private Integer id;
+    /**
+     * 姓名
+     */
+    @ApiModelProperty(value = "姓名", example = "张三", required = true)
     private String name;
 
     public Integer getId() {
