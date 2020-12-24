@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cc.mybatisdemo.mapper.StudentMapper">
+    <resultMap id="BaseResultMap" type="com.cc.mybatisdemo.pojo.Student">
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="name" jdbcType="VARCHAR" property="name" />
+    </resultMap>
+
+    <insert id="insert">
+        insert into student(name) value (#{name})
+    </insert>
+
+    <update id="updateByStudent">
+        update student
+        set name = #{student.name}
+        where id = #{student.id}
+    </update>
+
+    <select id="selectById" resultMap="BaseResultMap">
+        select *
+        from student
+        where id = #{id}
+    </select>
+
+    <delete id="deleteById">
+        delete from student
+        where id = #{id}
+    </delete>
+</mapper>
