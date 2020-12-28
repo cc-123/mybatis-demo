@@ -1,8 +1,8 @@
-package com.cc.mybatisdemo.service.impl;
+package com.cc.mybatisdemo.service.base.impl;
 
-import com.cc.mybatisdemo.mapper.StudentMapper;
-import com.cc.mybatisdemo.pojo.Student;
-import com.cc.mybatisdemo.service.StudentService;
+import com.cc.mybatisdemo.mapper.base.StudentMapper;
+import com.cc.mybatisdemo.pojo.base.Student;
+import com.cc.mybatisdemo.service.base.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

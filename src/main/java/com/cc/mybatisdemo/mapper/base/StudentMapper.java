@@ -1,6 +1,6 @@
-package com.cc.mybatisdemo.mapper;
+package com.cc.mybatisdemo.mapper.base;
 
-import com.cc.mybatisdemo.pojo.Student;
+import com.cc.mybatisdemo.pojo.base.Student;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

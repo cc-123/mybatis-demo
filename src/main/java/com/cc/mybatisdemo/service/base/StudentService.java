@@ -1,6 +1,6 @@
-package com.cc.mybatisdemo.service;
+package com.cc.mybatisdemo.service.base;
 
-import com.cc.mybatisdemo.pojo.Student;
+import com.cc.mybatisdemo.pojo.base.Student;
 
 import java.util.List;
 

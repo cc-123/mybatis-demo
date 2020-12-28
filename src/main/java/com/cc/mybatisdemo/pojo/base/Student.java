@@ -1,4 +1,4 @@
-package com.cc.mybatisdemo.pojo;
+package com.cc.mybatisdemo.pojo.base;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;

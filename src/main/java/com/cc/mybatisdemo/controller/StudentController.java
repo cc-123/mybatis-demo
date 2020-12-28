@@ -1,7 +1,7 @@
 package com.cc.mybatisdemo.controller;
 
-import com.cc.mybatisdemo.pojo.Student;
-import com.cc.mybatisdemo.service.StudentService;
+import com.cc.mybatisdemo.pojo.base.Student;
+import com.cc.mybatisdemo.service.base.StudentService;
 import com.cc.mybatisdemo.util.ApiResult;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
