@@ -3,6 +3,8 @@ package com.cc.mybatisdemo.mapper;
 import com.cc.mybatisdemo.pojo.Student;
 import org.apache.ibatis.annotations.Param;
 
+import java.util.List;
+
 public interface StudentMapper {
     /**
      * 新增数据
@@ -31,4 +33,10 @@ public interface StudentMapper {
      * @return
      */
     int deleteById(@Param("id") Integer id);
+
+    /**
+     * 查询所有学生数据
+     * @return
+     */
+    List<Student> selectAllData();
 }

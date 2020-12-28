@@ -2,6 +2,8 @@ package com.cc.mybatisdemo.service;
 
 import com.cc.mybatisdemo.pojo.Student;
 
+import java.util.List;
+
 public interface StudentService {
     /**
      * 新增数据
@@ -27,4 +29,10 @@ public interface StudentService {
      * @param id
      */
     void deleteById(Integer id);
+
+    /**
+     * 查询所有学生数据
+     * @return
+     */
+    List<Student> selectAllData();
 }

@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 @Service
 public class StudentServiceImpl implements StudentService {
     @Autowired
@@ -32,5 +34,10 @@ public class StudentServiceImpl implements StudentService {
     @Override
     public void deleteById(Integer id) {
         studentMapper.deleteById(id);
+    }
+
+    @Override
+    public List<Student> selectAllData() {
+        return studentMapper.selectAllData();
     }
 }

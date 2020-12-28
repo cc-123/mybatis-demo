@@ -26,4 +26,9 @@
         delete from student
         where id = #{id}
     </delete>
+
+    <select id="selectAllData" resultMap="BaseResultMap">
+        select *
+        from student
+    </select>
 </mapper>

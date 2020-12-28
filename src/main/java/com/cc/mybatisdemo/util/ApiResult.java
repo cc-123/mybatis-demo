@@ -1,38 +1,45 @@
 package com.cc.mybatisdemo.util;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import org.springframework.http.HttpStatus;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
-public class ApiResult {
+@ApiModel(value = "ApiResult<T>", description = "接口返回对象")
+public class ApiResult<T> {
     private static final String errorMessage = "系统发生异常";
     private SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
     /**
      * 消息提示
      */
+    @ApiModelProperty("消息提示")
     private String message;
     /**
      * 是否成功
      */
+    @ApiModelProperty("是否执行成功")
     private boolean succeed;
     /**
      * 状态码
      */
+    @ApiModelProperty("状态码")
     private Integer code;
     /**
      * 返回数据
      */
-    private Object data;
+    @ApiModelProperty("返回数据")
+    private T data;
     /**
-     * 返回时间
+     * 接口返回时间
      */
+    @ApiModelProperty("接口返回时间")
     private String responseDate;
 
     public ApiResult() {}
 
-    public ApiResult success(Object data) {
+    public ApiResult success(T data) {
         this.succeed = true;
         this.code = HttpStatus.OK.value();
         this.data = data;
@@ -90,7 +97,7 @@ public class ApiResult {
         return data;
     }
 
-    public void setData(Object data) {
+    public void setData(T data) {
         this.data = data;
     }
 
@@ -100,5 +107,16 @@ public class ApiResult {
 
     public void setResponseDate(String responseDate) {
         this.responseDate = responseDate;
+    }
+
+    @Override
+    public String toString() {
+        return "ApiResult{" +
+                "message='" + message + '\'' +
+                ", succeed=" + succeed +
+                ", code=" + code +
+                ", data=" + data +
+                ", responseDate='" + responseDate + '\'' +
+                '}';
     }
 }
